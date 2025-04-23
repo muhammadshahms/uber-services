@@ -10,6 +10,24 @@
   "monorepo": true,
   "root": "apps/uber-services",
   "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "kafka-client": {
+      "type": "library",
+      "root": "libs/kafka-client",
+      "entryFile": "index",
+      "sourceRoot": "libs/kafka-client/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/kafka-client/tsconfig.lib.json"
+      }
+    },
     "logging": {
       "type": "application",
       "root": "apps/logging",
@@ -17,6 +35,60 @@
       "sourceRoot": "apps/logging/src",
       "compilerOptions": {
         "tsConfigPath": "apps/logging/tsconfig.app.json"
+      }
+    },
+    "mongo-service": {
+      "type": "application",
+      "root": "apps/mongo-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/mongo-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mongo-service/tsconfig.app.json"
+      }
+    },
+    "mysql-service": {
+      "type": "application",
+      "root": "apps/mysql-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/mysql-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mysql-service/tsconfig.app.json"
+      }
+    },
+    "order": {
+      "type": "application",
+      "root": "apps/order",
+      "entryFile": "main",
+      "sourceRoot": "apps/order/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order/tsconfig.app.json"
+      }
+    },
+    "order-service": {
+      "type": "application",
+      "root": "apps/order-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/order-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order-service/tsconfig.app.json"
+      }
+    },
+    "payment": {
+      "type": "application",
+      "root": "apps/payment",
+      "entryFile": "main",
+      "sourceRoot": "apps/payment/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payment/tsconfig.app.json"
+      }
+    },
+    "payment-service": {
+      "type": "application",
+      "root": "apps/payment-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/payment-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payment-service/tsconfig.app.json"
       }
     },
     "rider": {

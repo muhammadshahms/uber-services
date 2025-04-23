@@ -1,0 +1,16 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:example@localhost:3306/nest_prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Order {
+  id          Int      @id @default(autoincrement())
+  productId   String
+  quantity    Int
+  totalPrice  Float
+  createdAt   DateTime @default(now())
+}
